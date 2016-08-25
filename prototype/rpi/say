@@ -1,0 +1,7 @@
+#!/bin/bash
+
+lang="de-DE"
+fnam="/home/pi/say.wav"
+
+pico2wave -l $lang -w $fnam "$@"
+aplay $fnam

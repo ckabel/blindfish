@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/home/pi/bin/capture
+/home/pi/bin/ocr
+/home/pi/bin/sayf /home/pi/capture.txt

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+python /home/pi/bin/capture.py
+
+convert /home/pi/capture.jpg -resize 1000 /home/pi/capture.tif

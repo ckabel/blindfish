@@ -1,0 +1,5 @@
+#!/bin/bash
+
+tesseract -l deu+deu-frak /home/pi/capture.tif /home/pi/capture
+
+

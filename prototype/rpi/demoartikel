@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sayf /home/pi/testartikel1.txt

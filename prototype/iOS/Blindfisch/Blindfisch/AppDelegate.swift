@@ -9,14 +9,17 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var speechW: SpeechWrapper!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.initialize()
         return true
     }
 
@@ -88,6 +91,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    // MARK: - Own Code
+    
+    func initialize () {
+        self.speechW = SpeechWrapper()
+        self.authorize()
+        
+        self.speechW.speak(msg: "Hallo! Tippe auf den Bildschirm um einen Sprachbefehl zu geben.")
+    }
+    
+    func authorize () {
+        self.speechW.authorizeSpeech()
+    }
+    
+    
 
 }
 
